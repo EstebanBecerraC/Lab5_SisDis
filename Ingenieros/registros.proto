@@ -1,0 +1,35 @@
+syntax = "proto3";
+option go_package = "./";
+
+service Solicitud_Info {
+    rpc Solicitar_Info (Mensaje) returns (Respuesta);
+}
+
+message Mensaje {
+    int32 comando = 1;        
+    string nombre_sector = 2;   
+    string nombre_base = 3;  
+    oneof opcional {
+        int32 valor = 4;
+        string nuevo_nombre = 5;
+    }
+}
+
+message Respuesta {
+    oneof opciones {
+        string direccion = 1;
+        Vector vector = 2;
+        Res_Kais detalle_con_lista = 3;
+    }
+}
+
+message Vector {
+    repeated int32 vector = 1;
+}
+
+message Res_Kais {
+    string nombre_sector = 1;
+    string nombre_base = 2;
+    int32 valor = 3;
+    repeated int32 vector = 4;
+}
