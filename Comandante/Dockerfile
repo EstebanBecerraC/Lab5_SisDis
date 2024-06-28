@@ -13,4 +13,4 @@ COPY kais.go .
 
 RUN go build -o cc kais.go
 
-ENTRYPOINT ["/ClientesIngenieros/cc"]
+ENTRYPOINT ["/ClientesComandante/cc"]
