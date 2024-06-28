@@ -16,8 +16,8 @@ type server struct {
 
 func (s *server) Solicitar_Info(ctx context.Context, mensaje *registros.Mensaje) (*registros.Respuesta, error) {
 
-	/// fulcrum_host := "dist022:50052"
-	fulcrum_host := "localhost:50052"
+	fulcrum_host := "dist022:50052"
+	/// fulcrum_host := "localhost:50052"
 	fmt.Println("Se recibio un mensaje. Respondiendo con Direccion: ", fulcrum_host)
 
 	return &registros.Respuesta{
