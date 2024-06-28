@@ -470,7 +470,7 @@ func (s *server) GetEnemigos(ctx context.Context, mensaje *registros.Mensaje) (*
 	valor := s.listaSectores[sector][base]
 	valor32 := int32(valor)
 
-	vector := []int32{int32(s.listaRelojes[base][0][0]), int32(s.listaRelojes[base][0][1]), int32(s.listaRelojes[base][0][2])}
+	vector := []int32{int32(s.listaRelojes[sector][0][0]), int32(s.listaRelojes[sector][0][1]), int32(s.listaRelojes[sector][0][2])}
 
 	res := sector + " " + base + " " + strconv.Itoa(valor) + "\n"
 	fmt.Println("Mandando el Siguiente Mensaje al Comandante :")
